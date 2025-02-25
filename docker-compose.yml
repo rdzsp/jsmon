@@ -1,0 +1,9 @@
+services:
+  js-monitoring:
+    container_name: js-monitoring
+    image: jsmon:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./targets:/app/targets:rw
