@@ -72,7 +72,7 @@ def save_endpoint(endpoint, ephash, eptext):
     with open("jsmon.json", "w") as jsm:
         json.dump(jsmd,jsm)
 
-    with open("downloads/{}".format(ephash), "w") as epw:
+    with open("downloads/{}".format(ephash), "w", encoding='utf-8') as epw:
         epw.write(eptext)
 
      
